@@ -10,5 +10,6 @@ public class Factorial {
             fact=fact*i;
         }
         System.out.println("The factorial is: "+fact);
+
     }
 }
