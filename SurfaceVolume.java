@@ -15,6 +15,7 @@ class Calculations{
         length=mesure.nextInt();
         breadth=mesure.nextInt();
         height=mesure.nextInt();
+        mesure.close();
     }
     void display(){
         area= 2*(length*breadth+breadth*height+height*length);
@@ -24,12 +25,12 @@ class Calculations{
     }
 }
 
-public class SurfaceVolume {
+public class SurfaceVolume
+{
     public static void main(String[] args)
     {
         Calculations ob1=new Calculations();
         ob1.insert();
         ob1.display();
     }
-
 }

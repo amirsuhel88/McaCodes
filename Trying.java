@@ -34,5 +34,6 @@ public class Trying
         Student st1 = new Student(sname, sroll);
         Student st2 = new Student(st1);
         st2.display();
+        sc.close();
     }
 }
