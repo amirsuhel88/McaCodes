@@ -3,7 +3,7 @@ import javax.swing.*;
 import java.awt.event.*;
 class Calculator extends JFrame implements ActionListener
 {
-	JButton b1;
+	JButton plusb, b1;
 	JLabel l1,l2,l3;
 	JTextField t1, t2, t3;
 	Calculator()
@@ -22,7 +22,9 @@ class Calculator extends JFrame implements ActionListener
 
 		t1 = new JTextField();
 	 	t1.setBounds(170, 50, 150,30);
+		t1.addActionListener(this);
 		add(t1);
+		//t1.setEditable(false);
 		
 		t2 = new JTextField();
 		t2.setBounds(170, 90,150,30);
@@ -32,11 +34,16 @@ class Calculator extends JFrame implements ActionListener
 		t3.setBounds(170, 130, 150,30);
 		add(t3);
 
-	 	b1= new JButton("add");
-		b1.setBounds(170,250,150,30);
-	 	add(b1);
-	 	b1.addActionListener(this);
+	 	plusb= new JButton("add");
+		plusb.setBounds(170,250,150,30);
+		plusb.addActionListener(this);
+	 	add(plusb);
 	 	
+		b1 = new JButton(String.valueOf('1'));
+		b1.setBounds(170,290,50,30);
+		add(b1);
+		b1.addActionListener(this);
+
 	    
 	 	setLayout(null);
 		setTitle("Calculator");
@@ -49,10 +56,15 @@ class Calculator extends JFrame implements ActionListener
 		int a = Integer.parseInt(t1.getText());
 		int b = Integer.parseInt(t2.getText());
 		int c;
-		if(e.getSource()==b1)
+		if(e.getSource()==plusb)
 		{
 			c=a+b;
 			t3.setText(String.valueOf(c));
+		} 
+
+		if(e.getSource()==b1)
+		{
+			t1.setText(t1.getText().concat(String.valueOf('1')));
 		}
 	}
 	 
