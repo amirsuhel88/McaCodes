@@ -4,15 +4,11 @@ interface Display_Interface
 {
     void display();
 }
-interface View_Interface
-{
-
-}
-interface Show_Interface extends Display_Interface, View_Interface
+interface Show_Interface
 {
     void show();
 }
- class MultiInterface implements Show_Interface
+ class MultiInterface implements Display_Interface, Show_Interface
 {
     public void display()
     {
