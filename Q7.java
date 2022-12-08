@@ -8,7 +8,7 @@ interface Show_Interface
 {
     void show();
 }
- class MultiInterface implements Display_Interface, Show_Interface
+ class Q7 implements Display_Interface, Show_Interface
 {
     public void display()
     {
@@ -22,16 +22,13 @@ interface Show_Interface
     {
         System.out.println("Unity is out strength");
     }
-}
-
-
-public class Q7 {
     public static void main(String[] args){
-        MultiInterface obj = new MultiInterface();
+        Q7 obj = new Q7();
         obj.display();
         obj.show();
         obj.view();
-        
     }
-    
 }
+
+
+
