@@ -33,10 +33,10 @@ public class Q1 {
         String sname;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your name: ");
-        sname= sc.nextLine();
+        sname= sc.nextLine();                                           
         System.out.println("Enter your roll no: ");
         sroll = sc.nextInt();
-        College ob = new College();
+       // College ob = new College();
         College ob1 = new College(sname,sroll);
         College ob2 = new College(ob1);
         sc.close();
